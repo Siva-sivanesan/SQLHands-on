@@ -1,0 +1,27 @@
+using System;
+using System.IO;
+
+namespace FileHandlingPractice
+{
+    internal class FileHandlingPrct2
+    { 
+        public void ReadFile()
+        {
+            FileStream fileStream = new FileStream(@"D:\Training\Filehandling\text.txt", FileMode.Open, FileAccess.Read);
+            StreamReader reader = new StreamReader(fileStream);
+            int count = 0;
+            while (reader.Peek() > 0)
+            {
+                string line = reader.ReadLine();
+                if(line.Contains("<input"))
+                {
+                    Console.WriteLine(line);
+                    count++;
+                }
+            }
+            Console.WriteLine("Number of <input terms : ", +count);
+            reader.Close();
+            fileStream.Close();
+        }
+    }
+}
