@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FileHandlingPractice
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            NetworkLog fileHandling = new NetworkLog();
+            fileHandling.ReadFile();
+            Success fileHandling1 = new Succeeded calls();
+            fileHandling1.ReadFile();
+            Failed fileHandling2 = new Failedcalls();
+            fileHandling2.ReadFile();
+            Dialled fileHandling4 = new Dialedcalls();
+            fileHandling4.ReadFile();
+            Console.Read();
+        }
+    }
+}
